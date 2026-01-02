@@ -1,0 +1,339 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #fdf6c7;
+    color: #2d2d2d;
+    line-height: 1.6;
+    font-size: 1.125rem;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #fdf6c7 0%, #f5edb0 100%);
+    padding: 80px 20px;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section .warning {
+    color: #a03b3b;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.hero-section h1 {
+    margin-bottom: 30px;
+    max-width: 900px;
+}
+
+.hero-section h1 .highlight {
+    color: #a03b3b;
+}
+
+.hero-section .subtitle {
+    color: #4d4d4d;
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: #a03b3b;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: #7d2929;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(160, 59, 59, 0.3);
+}
+
+.btn i {
+    margin-right: 8px;
+}
+
+/* Section Styles */
+.section {
+    padding: 80px 20px;
+}
+
+.section-dark {
+    background: linear-gradient(to bottom, #f5edb0 0%, #ede4a0 100%);
+}
+
+.section-gradient {
+    background: linear-gradient(135deg, rgba(253, 246, 199, 0.85) 0%, rgba(237, 228, 160, 0.85) 100%),
+        url('assets/pillars.jpeg') center/cover;
+    background-attachment: fixed;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2d2d2d;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #4d4d4d;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    font-size: 1.125rem;
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.feature-icon {
+    color: #16a34a;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.feature-text {
+    color: #3d3d3d;
+    line-height: 1.7;
+    font-size: 1.125rem;
+}
+
+/* About Section */
+.about-section {
+    background: linear-gradient(rgba(253, 246, 199, 0.9), rgba(253, 246, 199, 0.9)),
+        url('assets/tribunal.webp') no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(253, 246, 199, 0.85);
+}
+
+.about-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.about-text {
+    max-width: 700px;
+}
+
+.about-text h3 {
+    margin-bottom: 20px;
+    border-bottom: 3px solid #a03b3b;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* Testimonials */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(160, 59, 59, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.testimonial-card .quote-icon {
+    font-size: 2rem;
+    color: #a03b3b;
+    margin-bottom: 15px;
+}
+
+.testimonial-card .stars {
+    color: #fbbf24;
+    margin-bottom: 15px;
+}
+
+.testimonial-card .name {
+    font-weight: 600;
+    color: #2d2d2d;
+    margin-top: 20px;
+}
+
+.testimonial-card .text {
+    color: #3d3d3d;
+    line-height: 1.7;
+    font-size: 1.125rem;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(rgba(253, 246, 199, 0.8), rgba(253, 246, 199, 0.8)),
+        url('assets/tribunal.webp') center/cover;
+    text-align: center;
+}
+
+.cta-section h2 {
+    margin-bottom: 20px;
+}
+
+.cta-section .divider {
+    width: 100px;
+    height: 3px;
+    background: #a03b3b;
+    margin: 20px auto;
+}
+
+/* Contact Section */
+.contact-section {
+    background: #f5edb0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.contact-icon {
+    color: #a03b3b;
+    font-size: 1.3rem;
+}
+
+.contact-text {
+    color: #3d3d3d;
+    font-size: 1.125rem;
+}
+
+.contact-text a {
+    color: #3d3d3d;
+    text-decoration: none;
+}
+
+.contact-text a:hover {
+    color: #a03b3b;
+}
+
+/* Footer */
+.footer {
+    background: #ede4a0;
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid rgba(160, 59, 59, 0.2);
+}
+
+.footer p {
+    color: #5d5d5d;
+    margin: 0;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 20px;
+    }
+
+    .section {
+        padding: 60px 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+}
